@@ -1,10 +1,12 @@
-FROM debian:bullseye
+FROM debian:trixie
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
     openconnect \
     xterm \
+    lsd \
+    lazygit \
     sudo \
     curl \
     && apt-get clean
