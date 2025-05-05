@@ -13,4 +13,4 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ${HOME}/Downloads:/home/vpnuser/Downloads
-      - ${HOME}/
+      - ${HOME}/git:/home/vpnuser/git
