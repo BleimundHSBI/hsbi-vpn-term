@@ -28,4 +28,13 @@ EOF
 chmod +x "$DESKTOP_FILE"
 
 echo "Desktop shortcut installed: $DESKTOP_FILE"
-echo "Reminder: Your downloads from Firefox will go to your real ~/Downloads folder!"
+echo "Reminder: By default your Downloads and ~/git folder are synced. To add more edit the docker-compose.yml"
+
+echo "Process to build the container? \n
+If this is the first time you run the script select Y, else your can ignore."
+read -p "Build? [Y/n]" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+docker build -t vpn-terminal .
+fi
