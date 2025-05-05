@@ -9,7 +9,7 @@ mkdir -p "$DESKTOP_DIR"
 
 # Move the icon to the icon path
 mkdir -p ~/.local/share/icons
-cp "$PROJECT_DIR/firefox-hsbi.png" ~/.local/share/icons/
+cp "$PROJECT_DIR/terminal-hsbi.png" ~/.local/share/icons/
 
 # Create .desktop file content
 DESKTOP_FILE="$DESKTOP_DIR/hsbi-vpn-terminal.desktop"
@@ -20,7 +20,7 @@ Type=Application
 Name=HSBI VPN Terminal
 Comment=Launch Terminal over VPN using Docker Compose
 Exec=sh -c "cd '$PROJECT_DIR' && docker compose run --rm vpn-terminal; $SHELL"
-Icon=firefox-hsbi
+Icon=terminal-hsbi
 Terminal=true
 Categories=Network;WebBrowser;
 EOF
