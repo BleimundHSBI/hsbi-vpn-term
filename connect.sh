@@ -12,7 +12,7 @@ echo "Waiting for VPN connection..."
 sleep 2
 
 # Launch Firefox
-echo "Launching Firefox (using VPN tunnel)..."
+echo "Launching terminal (using VPN tunnel)..."
 echo "x-terminal-emulator" 
 x-terminal-emulator
 
