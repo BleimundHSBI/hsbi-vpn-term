@@ -1,0 +1,16 @@
+services:
+  vpn-terminal:
+    build: .
+    stdin_open: true
+    tty: true
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    environment:
+      - DISPLAY=$DISPLAY
+      - VPN_SERVER=vpn-gate-1.hsbi.de
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ${HOME}/Downloads:/home/vpnuser/Downloads
+      - ${HOME}/
